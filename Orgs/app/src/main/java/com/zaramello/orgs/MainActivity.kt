@@ -12,7 +12,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         Toast.makeText(this, "Bem vindo(a) ao Orgs", Toast.LENGTH_SHORT).show()
         val view = TextView(this)
-        view.setText("olá")
+        view.setText("oi")
         setContentView(view)
     }
 }
