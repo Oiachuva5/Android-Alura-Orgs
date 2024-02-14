@@ -2,7 +2,6 @@ package com.zaramello.orgs.ui.activity
 
 import android.app.Activity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zaramello.orgs.R
 import com.zaramello.orgs.model.ProductModel
@@ -14,7 +13,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.adapter = ProductListAdapter(context = this, product = listOf(
+        recyclerView.adapter = ProductListAdapter(context = this, products = listOf(
             ProductModel(nome = "teste",
                 descricao = "teste",
                 valor = BigDecimal("19.99")
@@ -28,6 +27,6 @@ class MainActivity : Activity() {
                 valor = BigDecimal("22.99")
             ),
         ))
-    //    recyclerView.layoutManager = LinearLayoutManager(this)
+//        recyclerView.layoutManager = LinearLayoutManager(this)
     }
 }
