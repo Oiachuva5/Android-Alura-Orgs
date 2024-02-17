@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.ProductFormActivity">
 
+    <EditText
+        android:id="@+id/nomeItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/descricaoItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descrição"
+        app:layout_constraintEnd_toEndOf="@id/nomeItem"
+        app:layout_constraintStart_toStartOf="@id/nomeItem"
+        app:layout_constraintTop_toBottomOf="@id/nomeItem" />
+
+    <EditText
+        android:id="@+id/valorItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Valor"
+        app:layout_constraintEnd_toEndOf="@id/nomeItem"
+        app:layout_constraintStart_toStartOf="@id/nomeItem"
+        app:layout_constraintTop_toBottomOf="@id/descricaoItem" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
