@@ -3,9 +3,9 @@ package com.zaramello.orgs.model
 import java.math.BigDecimal
 
 data class ProductModel(
-    val nome: String,
-    val descricao: String,
-    val valor: BigDecimal
+    val name: String,
+    val description: String,
+    val value: BigDecimal
 ) {
 
 }

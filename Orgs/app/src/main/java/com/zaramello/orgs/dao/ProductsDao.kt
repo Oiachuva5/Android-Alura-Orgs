@@ -3,10 +3,10 @@ package com.zaramello.orgs.dao
 import com.zaramello.orgs.model.ProductModel
 
 class ProductsDao {
-    fun adiciona(product: ProductModel){
+    fun add(product: ProductModel){
         products.add(product)
     }
-    fun buscaTodos(): List<ProductModel>{
+    fun findAll(): List<ProductModel>{
         return products.toList()
     }
 
