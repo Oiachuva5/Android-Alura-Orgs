@@ -11,8 +11,10 @@ import com.zaramello.orgs.model.ProductModel
 
 class ProductListAdapter(
     private val context: Context,
-    private val products: List<ProductModel>
+    products: List<ProductModel>
 ) : RecyclerView.Adapter<ProductListAdapter.ViewHolder>() {
+
+    private val products = products.toMutableList()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(product: ProductModel) {
@@ -39,5 +41,11 @@ class ProductListAdapter(
     }
 
     override fun getItemCount(): Int = products.size
+
+    fun update(products: List<ProductModel>) {
+        this.products.clear()
+        this.products.addAll(products)
+        notifyDataSetChanged()
+    }
 
 }
