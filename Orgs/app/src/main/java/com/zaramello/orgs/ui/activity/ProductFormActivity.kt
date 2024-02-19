@@ -1,11 +1,13 @@
 package com.zaramello.orgs.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.zaramello.orgs.R
+import com.zaramello.orgs.dao.ProductsDao
 import com.zaramello.orgs.model.ProductModel
 import java.math.BigDecimal
 
@@ -35,8 +37,14 @@ class ProductFormActivity : AppCompatActivity(R.layout.product_form_activity) {
                 valor = valor
             )
 
-
             Log.i("ProductForm", "onCreate: $newProduct")
+            val dao = ProductsDao()
+            dao.adiciona(newProduct)
+
+            Log.i("ProductForm", "onCreate: ${dao.buscaTodos()}")
+
+            finish()
+
         }
     }
 }
